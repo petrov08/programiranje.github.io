@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buvljak</title>
+<style>
+  body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  background-color: transparent;
+  padding: 9px;
+  width: 100%;
+  backdrop-filter: blur(100px);
+}
+
+.nav-item-container {
+  text-align: center;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: transform 0.5s ease, border-color 0.5s ease;
+  border: 2px solid transparent;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  border-color: #fff;
+}
+
+.nav-item:active {
+  transform: scale(1);
+  transition-duration: 0.2s;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+
+a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  border-top: 2px solid #fff;
+  backdrop-filter: blur(100px);
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  padding-bottom: 30px;
+}
+
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.download-container {
+  margin-top: 50px;
+}
+
+.download-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+}
+
+</style>
+</head>
+<body>
+
+<div class="nav-container">
+  <nav id="navbar">
+    <div class="nav-item-container">
+      <div class="nav-item" id="home"><a href="index">Почетна</a></div>
+      <div class="nav-item" id="preuzimanja"><a href="downloads">Преузимања</a></div>
+    </div>
+  </nav>
+</div>
+
+<div id="video-container">
+  <video autoplay loop muted>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div class="content">
+  <h1>Добро дошли на Бувљак</h1>
+  <p>Овде можете пронаћи кодове за програмски језик Ц или за веб програмирање и поделити их са пријатељима. Наш циљ је да обезбедимо лак приступ корисном коду и подржимо вашу развојну авантуру!</p>
+</div>
+
+<div class="download-container">
+  <div class="download-item">
+    <h2>Dokument 1</h2>
+    <p>Ovde možete preuzeti dokument 1.</p>
+    <a href="text.txt">Preuzmi</a>
+  </div>
+  <div class="download-item">
+    <h2>Dokument 2</h2>
+    <p>Ovde možete preuzeti dokument 2.</p>
+    <a href="text.txt">Preuzmi</a>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2024 Buvljak. Сва права задржана.</p>
+</footer>
+
+<script>
+window.addEventListener('resize', function() {
+  var navBar = document.getElementById('navbar');
+  navBar.style.width = '90%';
+});
+</script>
+
+</body>
+</html>
